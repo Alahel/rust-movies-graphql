@@ -1,0 +1,10 @@
+
+on Manjaro Linux
+
+```bash
+yay -Su rustup
+```
+
+```bash
+rustup default stable
+```
