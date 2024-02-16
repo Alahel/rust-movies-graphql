@@ -40,7 +40,7 @@ impl QueryRoot {
         first: Option<i32>,
         last: Option<i32>,
     ) -> Result<Connection<usize, Movie<'a>>> {
-        let movies = ctx.data_unchecked::<IMovies>().items().to_vec();
+        let movies = ctx.data_unchecked::<IMovies>().items().await;        
         query_movies(after, before, first, last, &movies, Movie).await
     }
 }
